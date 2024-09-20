@@ -40,5 +40,5 @@ Este é um aplicativo de lista de tarefas simples criado para Android. Ele permi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/Wesley00s/To-do-List
+   git clone https://github.com/Wesley00s/To-do-List.git
    
