@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar tarefa"
+        android:text="Editar tarefa"
         android:textSize="24sp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
@@ -21,17 +21,17 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/editTextTaskName"
+        android:id="@+id/editTextEditTaskName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:autofillHints="text"
-        android:hint="Nome da tarefa"
+        android:hint="Novo nome da tarefa"
+        android:layout_marginTop="16dp"
         android:inputType="text"
         android:paddingVertical="15dp"
-        android:layout_marginTop="16dp"
         android:textColorHint="@color/material_on_surface_disabled"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,51 +39,53 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
-        android:id="@+id/editTextTaskDescription"
+        android:id="@+id/editTextEditTaskDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="20sp"
         android:autofillHints="text"
         android:background="@drawable/edit_text_background"
-        android:hint="Descrição"
+        android:hint="Nova descrição"
         android:inputType="text"
         android:paddingHorizontal="15dp"
         android:textColorHint="@color/material_on_surface_disabled"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTaskName" />
+
+        app:layout_constraintTop_toBottomOf="@id/editTextEditTaskName" />
 
     <TextView
-        android:id="@+id/editTextDueDate"
+        android:id="@+id/editTextEditDueDate"
+        android:textSize="15sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Data de prazo"
+        android:hint="Nova data de prazo"
         android:paddingHorizontal="15dp"
         android:textColorHint="@color/material_on_surface_disabled"
-        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTaskDescription" />
+        app:layout_constraintTop_toBottomOf="@id/editTextEditTaskDescription" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Nível de prioridade"
+        android:text="Novo nível de prioridade"
+        android:textColor="@color/material_on_surface_disabled"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSaveTask"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEditTask"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/material_on_surface_disabled"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEditTaskDescription" />
+
 
     <RadioGroup
         android:id="@+id/radioGroupPriority"
@@ -97,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextDueDate">
+        app:layout_constraintTop_toBottomOf="@id/editTextEditDueDate">
 
         <RadioButton
             android:id="@+id/radioButtonHighPriority"
@@ -133,16 +135,31 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/buttonSaveTask"
+        android:id="@+id/buttonEditTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/rounded_button_background"
-        android:text="Salvar tarefa"
+        android:backgroundTint="#3AA55C"
+        android:text="Salvar modificações"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroupPriority" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_button_background"
+        android:backgroundTint="#3AA55C"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonEditTask" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
